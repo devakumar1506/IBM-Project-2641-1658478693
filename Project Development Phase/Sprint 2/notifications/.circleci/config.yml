@@ -1,0 +1,23 @@
+version: 2
+jobs:
+  run-checks:
+    docker:
+      - image: cypress/base:14.16.0
+        environment:
+          TERM: xterm
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Check code with eslint
+          command: npm run lint
+      - run:
+          name: Run end-to-end tests
+          command: npm run ci
+workflows:
+  version: 2
+  stack:
+    jobs:
+      - run-checks

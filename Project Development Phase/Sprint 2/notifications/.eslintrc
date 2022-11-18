@@ -1,0 +1,30 @@
+{
+  "extends": "airbnb-base",
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "cypress/globals": true
+  },
+  "plugins": ["svelte3", "cypress"],
+  "overrides": [
+    {
+      "files": ["**/*.svelte"],
+      "processor": "svelte3/svelte3",
+      "rules": {
+        "prefer-const": "off",
+        "import/first": "off",
+        "import/no-duplicates": "off",
+        "import/no-mutable-exports": "off",
+        "import/no-unresolved": "off",
+        "import/prefer-default-export": "off"
+      }
+    }
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": "off"
+  }
+}
