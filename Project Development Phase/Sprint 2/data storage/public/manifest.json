@@ -1,0 +1,15 @@
+{
+  "short_name": "Indexed DB Search",
+  "name": "Indexed DB Search SPA",
+  "icons": [
+    {
+      "src": "../src/logo.png",
+      "sizes": "144x144 64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#3a92cc",
+  "background_color": "#1d4661"
+}
